@@ -23,7 +23,9 @@ function enableCam(event) {
     }
     event.target.classList.add('removed');
     const constraints = {
-        video: true
+        video: {
+            facingMode: 'user'
+        }
     };
     navigator.mediaDevices.getUserMedia(constraints).then(function (stream) {
         video.srcObject = stream;
@@ -66,10 +68,10 @@ function predictWebcam() {
                         console.log(predictions[n].score);
                         alert.style.display = "none";
                     }
-                }else{
-                    setTimeout(()=>{
+                } else {
+                    setTimeout(() => {
                         alert.style.display = "none";
-                    },500)
+                    }, 500)
                 }
             }
             window.requestAnimationFrame(predictWebcam);
