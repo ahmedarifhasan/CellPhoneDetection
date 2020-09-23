@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <h2 class="text-center mt-5">
+    <h2 class="text-center mt-5" id="bu">
         <button class="btn btn-success btn-lg" id="webcamButton">Start Webcam</button>
     </h2>
     <div class="loading">
@@ -35,6 +35,14 @@
                     <video id="webcam" autoplay style="width: 100vw; height: 60vh;"></video>
                 </div>
             </section>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <div style="display: inline-block;" id="alert" class="alert alert-danger" style="display: none;">
+            <h3 style="font-family: monospace;" >
+                Detected a Phone
+            </h3>
         </div>
     </div>
 
