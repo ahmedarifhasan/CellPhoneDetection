@@ -12,6 +12,7 @@ if (getUserMediaSupported()) {
     enableWebcamButton.addEventListener('click', enableCam);
 } else {
     console.warn('getUserMedia() is not supported by your browser');
+    document.getElementById("alert").innerHTML = "getUserMedia() is not supported by your browser";
 }
 
 function enableCam(event) {
